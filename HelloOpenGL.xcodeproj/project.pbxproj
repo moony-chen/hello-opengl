@@ -20,6 +20,8 @@
 		1A9A3EA12487619000B2DA25 /* RWTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA02487619000B2DA25 /* RWTModel.m */; };
 		1A9A3EA424876F2A00B2DA25 /* RWTSquire.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA324876F2A00B2DA25 /* RWTSquire.m */; };
 		1A9A3EA72487846800B2DA25 /* RWTCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA62487846800B2DA25 /* RWTCube.m */; };
+		1A9A3EA924878E9400B2DA25 /* razewarelogo_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA824878E9400B2DA25 /* razewarelogo_128.png */; };
+		1A9A3EAB24878EA600B2DA25 /* dungeon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A3EAA24878EA600B2DA25 /* dungeon_01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		1A9A3EA324876F2A00B2DA25 /* RWTSquire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTSquire.m; sourceTree = "<group>"; };
 		1A9A3EA52487846800B2DA25 /* RWTCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWTCube.h; sourceTree = "<group>"; };
 		1A9A3EA62487846800B2DA25 /* RWTCube.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTCube.m; sourceTree = "<group>"; };
+		1A9A3EA824878E9400B2DA25 /* razewarelogo_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = razewarelogo_128.png; sourceTree = "<group>"; };
+		1A9A3EAA24878EA600B2DA25 /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dungeon_01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 		1A9A3E7C24873FA700B2DA25 /* HelloOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				1A9A3EAA24878EA600B2DA25 /* dungeon_01.png */,
+				1A9A3EA824878E9400B2DA25 /* razewarelogo_128.png */,
 				1A9A3E962487451F00B2DA25 /* Demo Resources */,
 				1A9A3E7D24873FA700B2DA25 /* AppDelegate.h */,
 				1A9A3E7E24873FA700B2DA25 /* AppDelegate.m */,
@@ -172,6 +178,8 @@
 				1A9A3E8D24873FAB00B2DA25 /* LaunchScreen.storyboard in Resources */,
 				1A9A3E9D2487451F00B2DA25 /* RWTSimpleVertex.glsl in Resources */,
 				1A9A3E9E2487451F00B2DA25 /* RWTSimpleFragment.glsl in Resources */,
+				1A9A3EA924878E9400B2DA25 /* razewarelogo_128.png in Resources */,
+				1A9A3EAB24878EA600B2DA25 /* dungeon_01.png in Resources */,
 				1A9A3E8A24873FAB00B2DA25 /* Assets.xcassets in Resources */,
 				1A9A3E8824873FA700B2DA25 /* Main.storyboard in Resources */,
 			);

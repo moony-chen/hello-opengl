@@ -49,6 +49,8 @@
          glVertexAttribPointer(RWTVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, Position));
          glEnableVertexAttribArray(RWTVertexAttribColor);
          glVertexAttribPointer(RWTVertexAttribColor, 4, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, Color));
+        glEnableVertexAttribArray(RWTVertexAttribTexCoord);
+        glVertexAttribPointer(RWTVertexAttribTexCoord, 2, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, TexCoord));
          
          
          glBindVertexArrayOES(0);
@@ -71,6 +73,7 @@
 
 - (void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix {
     _shader.modelViewMatrix = GLKMatrix4Multiply(parentModelViewMatrix, [self modelMatrix]);
+    _shader.texture = self.texture;
     [_shader prepareToDraw];
         
         
@@ -81,6 +84,20 @@
 }
 
 - (void)updateWithDelta:(NSTimeInterval)dt {
+    
+}
+
+- (void)loadTexture:(NSString *)filename {
+    NSError *error;
+    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:nil];
+    NSDictionary *options = @{ GLKTextureLoaderOriginBottomLeft: @YES };
+    
+    GLKTextureInfo *info = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
+    if (info == nil) {
+        NSLog(@"Error loading file: %@", error.localizedDescription);
+    } else {
+        self.texture = info.name;
+    }
     
 }
 

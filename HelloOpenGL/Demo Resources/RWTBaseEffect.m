@@ -13,6 +13,7 @@
   GLuint _programHandle;
     GLuint _modelViewMatrixUniform;
     GLuint _projectionMatrixUniform;
+    GLuint _texUniform;
 }
 
 - (GLuint)compileShader:(NSString*)shaderName withType:(GLenum)shaderType {
@@ -58,13 +59,14 @@
   
   glBindAttribLocation(_programHandle, RWTVertexAttribPosition, "a_Position");
   glBindAttribLocation(_programHandle, RWTVertexAttribColor, "a_Color");
+    glBindAttribLocation(_programHandle, RWTVertexAttribTexCoord, "a_TexCoord");
   
   glLinkProgram(_programHandle);
     
     self.modelViewMatrix = GLKMatrix4Identity;
     _modelViewMatrixUniform = glGetUniformLocation(_programHandle, "u_ModelViewMatrix");
     _projectionMatrixUniform = glGetUniformLocation(_programHandle, "u_ProjectionMatrix");
-
+    _texUniform = glGetUniformLocation(_programHandle, "u_Texture");
   
   GLint linkSuccess;
   glGetProgramiv(_programHandle, GL_LINK_STATUS, &linkSuccess);
@@ -81,6 +83,9 @@
   glUseProgram(_programHandle);
     glUniformMatrix4fv(_modelViewMatrixUniform, 1, 0, self.modelViewMatrix.m);
     glUniformMatrix4fv(_projectionMatrixUniform, 1, 0, self.projectionMatrix.m);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, self.texture);
+    glUniform1i(_texUniform, 1);
 }
 
 - (instancetype)initWithVertexShader:(NSString *)vertexShader fragmentShader:
