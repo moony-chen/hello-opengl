@@ -11,6 +11,7 @@
 
 @implementation RWTBaseEffect {
   GLuint _programHandle;
+    GLuint _modelViewMatrixUniform;
 }
 
 - (GLuint)compileShader:(NSString*)shaderName withType:(GLenum)shaderType {
@@ -58,6 +59,9 @@
   glBindAttribLocation(_programHandle, RWTVertexAttribColor, "a_Color");
   
   glLinkProgram(_programHandle);
+    
+    self.modelViewMatrix = GLKMatrix4Identity;
+    _modelViewMatrixUniform = glGetUniformLocation(_programHandle, "u_ModelViewMatrix");
   
   GLint linkSuccess;
   glGetProgramiv(_programHandle, GL_LINK_STATUS, &linkSuccess);
@@ -72,6 +76,7 @@
 
 - (void)prepareToDraw {
   glUseProgram(_programHandle);
+    glUniformMatrix4fv(_modelViewMatrixUniform, 1, 0, self.modelViewMatrix.m);
 }
 
 - (instancetype)initWithVertexShader:(NSString *)vertexShader fragmentShader:

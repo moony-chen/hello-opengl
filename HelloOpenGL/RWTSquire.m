@@ -29,4 +29,9 @@ const static GLubyte indices[] = {
     return self;
 }
 
+- (void)updateWithDelta:(NSTimeInterval)dt {
+    float secsPerMove = 2;
+    self.position = GLKVector3Make(sinf(CACurrentMediaTime() * 2*M_PI / secsPerMove), self.position.y, self.position.z);
+}
+
 @end

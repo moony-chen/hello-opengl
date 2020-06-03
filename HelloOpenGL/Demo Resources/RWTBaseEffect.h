@@ -12,6 +12,7 @@
 @interface RWTBaseEffect : NSObject
 
 @property (nonatomic, assign) GLuint programHandle;
+@property (nonatomic, assign) GLKMatrix4 modelViewMatrix;
 
 - (id)initWithVertexShader:(NSString *)vertexShader
             fragmentShader:(NSString *)fragmentShader;
