@@ -19,6 +19,7 @@
 		1A9A3E9E2487451F00B2DA25 /* RWTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A3E9B2487451F00B2DA25 /* RWTSimpleFragment.glsl */; };
 		1A9A3EA12487619000B2DA25 /* RWTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA02487619000B2DA25 /* RWTModel.m */; };
 		1A9A3EA424876F2A00B2DA25 /* RWTSquire.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA324876F2A00B2DA25 /* RWTSquire.m */; };
+		1A9A3EA72487846800B2DA25 /* RWTCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A3EA62487846800B2DA25 /* RWTCube.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		1A9A3EA02487619000B2DA25 /* RWTModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTModel.m; sourceTree = "<group>"; };
 		1A9A3EA224876F2A00B2DA25 /* RWTSquire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWTSquire.h; sourceTree = "<group>"; };
 		1A9A3EA324876F2A00B2DA25 /* RWTSquire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTSquire.m; sourceTree = "<group>"; };
+		1A9A3EA52487846800B2DA25 /* RWTCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWTCube.h; sourceTree = "<group>"; };
+		1A9A3EA62487846800B2DA25 /* RWTCube.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTCube.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				1A9A3EA02487619000B2DA25 /* RWTModel.m */,
 				1A9A3EA224876F2A00B2DA25 /* RWTSquire.h */,
 				1A9A3EA324876F2A00B2DA25 /* RWTSquire.m */,
+				1A9A3EA52487846800B2DA25 /* RWTCube.h */,
+				1A9A3EA62487846800B2DA25 /* RWTCube.m */,
 			);
 			path = HelloOpenGL;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9A3EA72487846800B2DA25 /* RWTCube.m in Sources */,
 				1A9A3EA424876F2A00B2DA25 /* RWTSquire.m in Sources */,
 				1A9A3E8524873FA700B2DA25 /* ViewController.m in Sources */,
 				1A9A3EA12487619000B2DA25 /* RWTModel.m in Sources */,
