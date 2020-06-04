@@ -51,6 +51,8 @@
          glVertexAttribPointer(RWTVertexAttribColor, 4, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, Color));
         glEnableVertexAttribArray(RWTVertexAttribTexCoord);
         glVertexAttribPointer(RWTVertexAttribTexCoord, 2, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, TexCoord));
+        glEnableVertexAttribArray(RWTVertexAttribNormal);
+        glVertexAttribPointer(RWTVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, sizeof(RWTVertex), (const GLvoid *)offsetof(RWTVertex, Normal));
          
          
          glBindVertexArrayOES(0);
