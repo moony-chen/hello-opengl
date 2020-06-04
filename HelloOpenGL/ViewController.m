@@ -50,6 +50,7 @@
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
      
     GLKMatrix4 viewMatrix = GLKMatrix4MakeTranslation(0, 0, -5);
+    viewMatrix = GLKMatrix4Rotate(viewMatrix, GLKMathDegreesToRadians(20), 1, 0, 0);
 //    [_square renderWithParentModelViewMatrix:viewMatrix];
     [_cube renderWithParentModelViewMatrix:viewMatrix];
     

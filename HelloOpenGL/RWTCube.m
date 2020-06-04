@@ -72,14 +72,14 @@ const GLubyte indices[] = {
 
 - (instancetype)initWithShader:(RWTBaseEffect *)shader {
     if (self = [super initWithName:"cube" shader:shader vertices:(RWTVertex *)vertices vertextCount:sizeof(vertices)/sizeof(vertices[0]) indices:(GLubyte *)indices indexCount:sizeof(indices)/sizeof(indices[0])]) {
-        [self loadTexture:@"razewarelogo_128.png"];
+        [self loadTexture:@"dungeon_01.png"];
     }
     return self;
 }
 
 - (void)updateWithDelta:(NSTimeInterval)dt {
-    self.rotationZ += M_PI * dt;
-    self.rotationY += M_PI * dt;
+//    self.rotationZ += M_PI * dt;
+    self.rotationY += M_PI/8 * dt;
 }
 
 

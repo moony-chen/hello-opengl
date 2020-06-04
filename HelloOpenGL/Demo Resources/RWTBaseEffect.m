@@ -14,6 +14,8 @@
     GLuint _modelViewMatrixUniform;
     GLuint _projectionMatrixUniform;
     GLuint _texUniform;
+    GLuint _lightColorUniform;
+    GLuint _lightAmbientIntensityUniform;
 }
 
 - (GLuint)compileShader:(NSString*)shaderName withType:(GLenum)shaderType {
@@ -67,6 +69,8 @@
     _modelViewMatrixUniform = glGetUniformLocation(_programHandle, "u_ModelViewMatrix");
     _projectionMatrixUniform = glGetUniformLocation(_programHandle, "u_ProjectionMatrix");
     _texUniform = glGetUniformLocation(_programHandle, "u_Texture");
+    _lightColorUniform = glGetUniformLocation(_programHandle, "u_Light.Color");
+    _lightAmbientIntensityUniform = glGetUniformLocation(_programHandle, "u_Light.AmbientIntensity");
   
   GLint linkSuccess;
   glGetProgramiv(_programHandle, GL_LINK_STATUS, &linkSuccess);
@@ -86,6 +90,8 @@
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, self.texture);
     glUniform1i(_texUniform, 1);
+    glUniform3f(_lightColorUniform, 1, 1, 1);
+    glUniform1f(_lightAmbientIntensityUniform, 0.8);
 }
 
 - (instancetype)initWithVertexShader:(NSString *)vertexShader fragmentShader:
